@@ -1,6 +1,5 @@
 import User from "../models/user.model.js";
 import bcrypt from "bcryptjs";
-import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
 import {
   sendResetPasswordEmail,
   sendResetSuccessEmail,
@@ -9,6 +8,7 @@ import {
 } from "../mailtrap/emails.js";
 import crypto from "crypto";
 import { isValidPhoneNumber, parsePhoneNumber } from "libphonenumber-js";
+import { generateTokenAndSetCookie } from "../utils/generateTokenAndSetCookie.js";
 
 const signup = async (req, res) => {
   try {
